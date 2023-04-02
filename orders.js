@@ -44,7 +44,7 @@ class Ticket{
         this.status = 'queued';
     }
     updateStatus(newStatus){
-        console.log(`The order for customer ${CUSTOMERID} is now ${STATUS}.`)
+        console.log(`The order for customer ${this.customerId} is now ${this.status}.`)
         }
     }
     const updatedStatus = new Ticket()
@@ -66,7 +66,7 @@ class Ticket{
 
 //CODE HERE
 
-const firstTicket = new Ticket('pizza, bread sticks, and sodies')
+const firstTicket = new Ticket('pizza, bread sticks, and sodies', '9:32 PM', 'Dez')
 console.log(firstTicket.items)
 
 /*
