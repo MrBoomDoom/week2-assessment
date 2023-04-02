@@ -83,10 +83,6 @@ let calcFinalPrice = (cartTotal, couponValue, tax) => {
     Your object should have at least 4 properties. 
 */
 
-/*
-    TEXT ANSWER HERE
-
-*/
 
 /*
     Now, create a customer object following your own
@@ -94,3 +90,10 @@ let calcFinalPrice = (cartTotal, couponValue, tax) => {
 */
 
 //CODE HERE
+
+let customer = {
+    name: 'Torbjorn',
+    phoneNumber: '(480)-480-4800',
+    review: 10,
+    favoriteDish: 'pizza'
+}

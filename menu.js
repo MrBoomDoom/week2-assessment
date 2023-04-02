@@ -32,13 +32,13 @@
 
 //CODE HERE
 
-let pizza = {
+const Pizza = {
     name: "pineapple",
     price: 6,
     category: "meal",
     popularity: 8,
-    rating: 7,
-    tags: ["bread", "cheese", "pineapple"]
+    rating: 8,
+    tags: ["veggie", "gluten-free"]
     // function () { 
     //     return this.name + ' ' + this.category
     // }
@@ -55,7 +55,7 @@ let pizza = {
 
 //CODE HERE
 
-console.log(pizza.popularity)
+console.log(Pizza.popularity)
 
 /*
     Second, log the second tag in your pizza's
@@ -67,7 +67,7 @@ console.log(pizza.popularity)
 //CODE HERE
 
 // pizza.tags
-console.log(pizza.tags[1])
+console.log(Pizza.tags[1])
 
 /*
     Third, destructure the price off of the
@@ -78,7 +78,8 @@ console.log(pizza.tags[1])
 
 //CODE HERE
 
-console.log(pizza.price*.7)
+const {price} = Pizza
+console.log(price)
 
 /*
     Fourth, and last, destructure the category
@@ -89,7 +90,8 @@ console.log(pizza.price*.7)
 
 //CODE HERE
 
-console.log(pizza.category.kids)
+const {category} = Pizza
+console.log(category)
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -105,7 +107,42 @@ console.log(pizza.category.kids)
 
 //CODE HERE
 
+const foodArr = [
+    { name: 'Burger',
+    price: 12,
+    category: 'meal',
+    popularity: 10,
+    rating: 10,
+    tags: ['Amazing']},
+    
+    { name: 'soup',
+    price: 6,
+    category: 'side',
+    popularity: 7,
+    rating: 8,
+    tags: ['good with grilled cheese']},
 
+    { name: 'Grilled Cheese',
+    price: 10,
+    category: 'meal',
+    popularity: 8,
+    rating: 9.5,
+    tags: ['Extra cheesy']},
+
+    { name: 'French Fries',
+    price: 5,
+    category: 'side',
+    popularity: 10,
+    rating: 10,
+    tags: ['side dish']},
+
+    { name: 'Quesadilla',
+    price: 6,
+    category: 'meal',
+    popularity: 8,
+    rating: 8,
+    tags: ['kids']}
+]
 
 //////////////////PROBLEM 4////////////////////
 /* 
@@ -121,7 +158,11 @@ console.log(pizza.category.kids)
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter((checkTags) => {
+    return checkTags.tags.indexOf('starter') >= 0
+})
+
+console.log(filteredFood)
 
 
 
@@ -165,7 +206,6 @@ console.log(pizza.category.kids)
 */
 
 //CODE HERE
-
 
 /*
     Invoke the `filterByProperty` function passing
